@@ -14,15 +14,30 @@ public class SphereControl : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
-        transform.position += Vector3.up* Time.deltaTime;
+        transform.position += transform.forward*  Time.deltaTime;
 
         if (Input.GetKey(KeyCode.DownArrow))
-            transform.position += Vector3.down* Time.deltaTime;
+            transform.position -= transform.forward* Time.deltaTime;
 
         if (Input.GetKey(KeyCode.LeftArrow))
-            transform.position += Vector3.left* Time.deltaTime;
+            transform.position -= transform.right* Time.deltaTime;
 
         if (Input.GetKey(KeyCode.RightArrow))
-            transform.position += Vector3.right* Time.deltaTime;
+            transform.position += transform.right* Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(Vector3.up, 1);
+
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(Vector3.up, -1);
+
+        // if (Input.GetKey(KeyCode.J))
+        // { 
+        //   transform.Rotate(Vector3.up, turningSpeed* Time.deltaTime)
+
+        // }
+
+
+
     }
 }
