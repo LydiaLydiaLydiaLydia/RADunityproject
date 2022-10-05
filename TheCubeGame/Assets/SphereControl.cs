@@ -13,28 +13,28 @@ public class SphereControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Up arrow goes forward
-        if (Input.GetKey(KeyCode.UpArrow))
+        //W key makes Lydia go forward
+        if (Input.GetKey(KeyCode.W))
         transform.position += transform.forward*  Time.deltaTime;
 
-        //Down arrow goes backwards
-        if (Input.GetKey(KeyCode.DownArrow))
+        //S key makes Lydia go backward
+        if (Input.GetKey(KeyCode.S))
             transform.position -= transform.forward* Time.deltaTime;
 
-        //Left arrow goes left
-        if (Input.GetKey(KeyCode.LeftArrow))
+        //A key makes Lydia go left
+        if (Input.GetKey(KeyCode.A))
             transform.position -= transform.right* Time.deltaTime;
 
-        //Right arrow goes right
-        if (Input.GetKey(KeyCode.RightArrow))
+        //D key makes Lydia go right
+        if (Input.GetKey(KeyCode.D))
             transform.position += transform.right* Time.deltaTime;
 
-        //D Key lets you turn clockwise as you hold it down
-        if (Input.GetKey(KeyCode.D))
+        //E Key lets you turn clockwise as you hold it down
+        if (Input.GetKey(KeyCode.E))
             transform.Rotate(Vector3.up, 1);
 
-        //A Key lets you turn anti-clockwise as you hold it down
-        if (Input.GetKey(KeyCode.A))
+        //Q Key lets you turn anti-clockwise as you hold it down
+        if (Input.GetKey(KeyCode.Q))
             transform.Rotate(Vector3.up, -1);
 
         // if (Input.GetKey(KeyCode.J))
@@ -43,13 +43,8 @@ public class SphereControl : MonoBehaviour
 
         // }
 
-        //Trying to get Lydia to jump
-        if (Input.GetKey(KeyCode.Space))
-            for (int i = 0; i < 10; i++)
-            {
-                transform.position += transform.up* Time.deltaTime;
-            }
-            
+        
+        
 
 
 

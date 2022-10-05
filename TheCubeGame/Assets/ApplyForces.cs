@@ -20,10 +20,15 @@ public class ApplyForces : MonoBehaviour
         {
             ourRigidBody.AddExplosionForce(10000, transform.position, 2);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ourRigidBody.AddForce(Vector3.up * 300);
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        collision.transform.position += Vector3.down;
-    }
+   // private void OnCollisionEnter(Collision collision)
+   // {
+   //     collision.transform.position += Vector3.down;
+   // }
 }
