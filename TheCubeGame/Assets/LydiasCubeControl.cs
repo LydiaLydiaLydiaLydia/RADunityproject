@@ -17,27 +17,22 @@ public class LydiasCubeControl : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
          //remember, distance = velocity*time
-            transform.position += Vector3.forward * Time.deltaTime;
+            transform.position += transform.forward * Time.deltaTime;
         }
 
         //use S to move the cube backwards
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= Vector3.forward * Time.deltaTime;
+            transform.position -= transform.forward * Time.deltaTime;
         }
 
-        //use W to move the cube forward
-        if (Input.GetKey(KeyCode.W))
-        {
-            //remember, distance = velocity*time
-            transform.position += Vector3.up * Time.deltaTime;
-        }
+        //use D to rotate clockwise
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(Vector3.up, 1);
 
-        //use W to move the cube forward
-        if (Input.GetKey(KeyCode.W))
-        {
-            //remember, distance = velocity*time
-            transform.position += Vector3.up * Time.deltaTime;
-        }
+        //use A to rotate anti-clockwise
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(Vector3.up, -1);
+        
     }
 }
