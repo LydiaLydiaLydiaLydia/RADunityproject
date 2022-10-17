@@ -9,12 +9,20 @@ public class LydiaApplyForce : MonoBehaviour
 
     void Start()
     {
-        ourRigidBody 
+        lydiasRigidBody = GetComponent<Rigidbody>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            lydiasRigidBody.AddForce(10*Vector3.up);
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            lydiasRigidBody.AddExplosionForce(1000, transform.position - new Vector3(0, -1, -1), 3);
+        }
     }
 }
