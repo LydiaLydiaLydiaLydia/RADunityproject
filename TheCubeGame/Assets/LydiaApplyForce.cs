@@ -25,4 +25,13 @@ public class LydiaApplyForce : MonoBehaviour
             lydiasRigidBody.AddExplosionForce(1000, transform.position - new Vector3(0, -1, -1), 3);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Ouch");
+
+        //Making the platform fall
+        //collision.transform.position += Vector3.down;
+
+    }
 }
