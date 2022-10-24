@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1998973851110358133}
   - component: {fileID: 3597708953589738320}
   - component: {fileID: 2520983650910244088}
+  - component: {fileID: 252378304871111367}
   m_Layer: 0
   m_Name: LydiasSphere
   m_TagString: Untagged
@@ -114,3 +115,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &252378304871111367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688323853247327174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b113b4306ab79c64da95f83d5cca21e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
