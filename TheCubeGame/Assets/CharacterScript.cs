@@ -19,6 +19,7 @@ public class CharacterScript : MonoBehaviour
         {
             Instantiate(sphereCloneTemplate);
            
+           
         }
     }
 
