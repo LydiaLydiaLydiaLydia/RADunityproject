@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class sphereScript : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,10 @@ public class sphereScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("ouch");
+        print("couch");
+
+        transform.position(Vector3.up) += 10;
+        
         healthColour possibleVictim = collision.transform.GetComponent<healthColour>();
         // if the above statement isn't null, go ahead and do this next bit
         if (possibleVictim)

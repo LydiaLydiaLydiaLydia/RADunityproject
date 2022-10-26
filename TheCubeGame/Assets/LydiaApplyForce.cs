@@ -29,9 +29,7 @@ public class LydiaApplyForce : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         print("Ouch");
-
-        //Making the platform fall
-        //collision.transform.position += Vector3.down;
+        lydiasRigidBody.AddForce(100*Vector3.up);
 
     }
 }
