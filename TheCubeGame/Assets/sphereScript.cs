@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class sphereScript : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +33,5 @@ public class sphereScript : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
             transform.position -= transform.right * 4 * Time.deltaTime;
     }
-
 
 }
