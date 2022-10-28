@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraFOllow : MonoBehaviour
 {
+    public GameObject centreTreeLocation; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,20 +15,9 @@ public class CameraFOllow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //W key makes Lydia go forward
-      //  if (Input.GetKey(KeyCode.W))
-       //     transform.position += transform.forward * Time.deltaTime;
+        //trying to get the camera to rotate around an axis in the centre of the platforms, in order to follow the spheres' rotations
 
-        //S key makes Lydia go backward
-      //  if (Input.GetKey(KeyCode.S))
-       //     transform.position -= transform.forward * Time.deltaTime;
-
-        //A key makes Lydia go left
-        //if (Input.GetKey(KeyCode.A))
-          //  transform.position -= transform.right * Time.deltaTime;
-
-        //D key makes Lydia go right
-       // if (Input.GetKey(KeyCode.D))
-         //   transform.position += transform.right * Time.deltaTime;
+        if (Input.GetKey(KeyCode.D))
+            transform.RotateAround(centreTreeLocation.transform.position, Vector3.up, 1);
     }
 }
