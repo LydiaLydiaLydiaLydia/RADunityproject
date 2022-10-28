@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterScript : MonoBehaviour
+
+    //SCRIPT INSTANTIATES A NEW BOUNCY BALL WHEN YOU PRESS THE E KEY
 {
     public GameObject sphereCloneTemplate;
 
@@ -15,7 +17,7 @@ public class CharacterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(sphereCloneTemplate, transform.position, transform.rotation);
            

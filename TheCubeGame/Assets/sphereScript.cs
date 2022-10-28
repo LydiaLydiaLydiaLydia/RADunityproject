@@ -14,26 +14,25 @@ public class sphereScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //use W to move the cube forward
+        //use W to move the ball forwards
         if (Input.GetKey(KeyCode.W))
         {
-            //remember, distance = velocity*time
-            transform.position += transform.forward * Time.deltaTime;
+            transform.position += transform.forward * 4 * Time.deltaTime;
         }
 
-        //use S to move the cube backwards
+        //use S to move the ball backwards
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= transform.forward * Time.deltaTime;
+            transform.position -= transform.forward * 4 * Time.deltaTime;
         }
 
-        //use D to rotate clockwise
+        //use D to move the ball left
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(Vector3.up, 1);
+            transform.position += transform.right * 4 * Time.deltaTime;
 
-        //use A to rotate anti-clockwise
+        //use A to move the ball right
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(Vector3.up, -1);
+            transform.position -= transform.right * 4 * Time.deltaTime;
     }
 
 
