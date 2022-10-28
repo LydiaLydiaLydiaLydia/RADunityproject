@@ -36,17 +36,5 @@ public class sphereScript : MonoBehaviour
             transform.Rotate(Vector3.up, -1);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        print("couch");
-
-        
-        healthColour possibleVictim = collision.transform.GetComponent<healthColour>();
-        // if the above statement isn't null, go ahead and do this next bit
-        if (possibleVictim)
-        {
-            possibleVictim.takeDamage(1);
-        }
-    }
 
 }
